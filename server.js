@@ -3,6 +3,7 @@ const morgan = require("morgan"); //logger
 const helmet = require("helmet"); //makes API requests more secure
 
 const connectDB = require("./db"); //   ./ means you are in the current folder, db = name of the folder
+const consumer = require("./routes/api/consumer");
 
 const app = express();
 const port = 5000;
@@ -20,5 +21,8 @@ app.use(function (req, res, next) {
 app.use(morgan("dev"));
 app.use(helmet());
 connectDB();
+app.use("/api/v1/consumer", consumer);
+
+// http://localhost:5000/api/v1/consumer/register/theater
 
 app.listen(port, () => console.log(`API server listening on ${port}`)); // ` allows you to pass in variables to the string
