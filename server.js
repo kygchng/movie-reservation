@@ -24,5 +24,11 @@ connectDB();
 app.use("/api/v1/consumer", consumer);
 
 // http://localhost:5000/api/v1/consumer/register/theater
+// http://localhost:5000/api/v1/consumer/register/movie
+// http://localhost:5000/api/v1/consumer/register/showing
+// http://localhost:5000/api/v1/consumer/fetch/theaters
+// http://localhost:5000/api/v1/consumer/fetch/movies/:theaterID
+// http://localhost:5000/api/v1/consumer/fetch/movie/:movieID
+// http://localhost:5000/api/v1/consumer/fetch/available/showings/:movieID
 
 app.listen(port, () => console.log(`API server listening on ${port}`)); // ` allows you to pass in variables to the string
