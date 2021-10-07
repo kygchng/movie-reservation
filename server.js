@@ -30,5 +30,12 @@ app.use("/api/v1/consumer", consumer);
 // http://localhost:5000/api/v1/consumer/fetch/movies/:theaterID
 // http://localhost:5000/api/v1/consumer/fetch/movie/:movieID
 // http://localhost:5000/api/v1/consumer/fetch/available/showings/:movieID
+// http://localhost:5000/api/v1/consumer/register/seat
+// http://localhost:5000/api/v1/consumer/make/reservation
+// http://localhost:5000/api/v1/consumer/update/reservation
+// http://localhost:5000/api/v1/consumer/delete/reservation/:email
+// http://localhost:5000/api/v1/consumer/fetch/movie/revenue/:movieId
+// http://localhost:5000/api/v1/consumer/fetch/theater/revenue/:theaterId
+
 
 app.listen(port, () => console.log(`API server listening on ${port}`)); // ` allows you to pass in variables to the string
